@@ -1,0 +1,28 @@
+{
+  "clips": [
+    {
+      "id": "astro_portal_001",
+      "file": "clips/drop/astro_portal_001.mp4",
+      "category": "drop",
+      "duration_ms": 12000,
+      "impact_ms": 5200,
+      "weight": 1.0,
+      "min_seconds_between_repeats": 3600,
+      "tags": ["astronaut", "portal", "orange_suit", "medium_intensity"],
+      "allowed_states": ["BUILD", "PEAK"],
+      "max_plays_per_event": 2
+    },
+    {
+      "id": "slow_pass_001",
+      "file": "clips/random/slow_pass_001.mp4",
+      "category": "random",
+      "duration_ms": 10000,
+      "impact_ms": null,
+      "weight": 1.0,
+      "min_seconds_between_repeats": 2400,
+      "tags": ["astronaut", "slow", "calm"],
+      "allowed_states": ["NORMAL", "BREAKDOWN"],
+      "max_plays_per_event": 2
+    }
+  ]
+}

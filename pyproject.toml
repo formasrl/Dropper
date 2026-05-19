@@ -1,0 +1,19 @@
+[project]
+name = "obs-auto-drop-agent"
+version = "0.1.0"
+description = "Windows-local OBS auto-drop visual agent scaffold"
+requires-python = ">=3.11,<3.14"
+readme = "README.md"
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0",
+]
+audio-extra = [
+  "aubio>=0.4.9",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = "-q"

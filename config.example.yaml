@@ -1,0 +1,58 @@
+obs:
+  host: "127.0.0.1"
+  port: 4455
+  password_env: "OBS_WS_PASSWORD"
+  scene_name: "SHOW_MAIN"
+  background_source_name: "BG_SYNES_SPOUT"
+  overlay_source_name: "OVERLAY_VIDEO"
+  flash_source_name: "FLASH_WHITE"
+  blackout_source_name: "BLACKOUT"
+  chroma_filter_name: "KEY_GREEN"
+
+network:
+  local_only: true
+  dashboard_host: "127.0.0.1"
+  dashboard_port: 8787
+  allow_lan: false
+
+audio:
+  input_device_name: null
+  sample_rate: 48000
+  block_size: 1024
+  channels: 1
+  calibration_seconds: 180
+
+triggering:
+  mode: "auto_only"
+  enable_random_ambient: true
+  enable_drop_preroll: true
+  min_seconds_between_any_overlay: 240
+  min_seconds_between_drop_overlays: 420
+  max_drop_overlays_per_hour: 6
+  confidence_threshold: 0.78
+  preroll_tolerance_ms: 500
+  default_impact_ms: 5200
+  random_interval_min_sec: 420
+  random_interval_max_sec: 900
+  skip_if_audio_confidence_low: true
+
+visuals:
+  flash_enabled: true
+  flash_duration_ms: 150
+  overlay_fade_in_ms: 100
+  overlay_fade_out_ms: 250
+  hide_overlay_after_clip: true
+
+safety:
+  auto_hide_on_obs_error: true
+  auto_hide_on_audio_silence_sec: 5
+  blackout_hotkey: "b"
+  pause_hotkey: "space"
+  test_drop_hotkey: "d"
+  test_random_hotkey: "r"
+
+logging:
+  level: "INFO"
+  write_jsonl: true
+  write_csv_features: true
+  logs_dir: "logs"
